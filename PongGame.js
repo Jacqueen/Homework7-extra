@@ -26,10 +26,6 @@ var b = 10;
 var width1 = 20;
 var height1 = 100;
 
-const upKey = 38;
-const downKey = 40;
-const wKey = 87;
-const sKey = 83;
 
 const gameOverSound = new Audio("http://soundjig.com/pages/soundfx/beeps.php?mp3=beep9.mp3");
 
@@ -93,6 +89,7 @@ else if(y < 0) {
 	ctx.fillRect(a,b, width1, height1);
 	
 	
+	// collision detection
 	
 	if(x < a + width1 && x + radius * 2 > a && y < b + height1 && y + radius * 2 > b) {
 		dx = -dx;
@@ -125,6 +122,10 @@ loop();
 
 
 
+	const upKey = 38;
+	const downKey = 40;
+	const wKey = 87;
+	const sKey = 83;
 	
 	document.addEventListener('keydown', function(event){
 		
